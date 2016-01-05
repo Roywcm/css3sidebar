@@ -1,18 +1,16 @@
 {
-	"name": "jquery-boilerplate",
-	"version": "4.0.0",
-	"homepage": "http://jqueryboilerplate.com",
+	"name": "CSS3 sidebar",
+	"version": "1.0.0",
 	"authors": [
-		"Zeno Rocha <hi@zenorocha.com>"
+		"Roy Wulms <info@roywulms.nl>"
 	],
-	"description": "A jump-start for jQuery plugins development.",
-	"main": "src/jquery.boilerplate.js",
+	"description": "Start building an awesome sidebar.",
+	"main": "src/jquery.css3sidebar.js",
 	"keywords": [
-		"jquery",
-		"plugin",
-		"boilerplate",
 		"jquery-plugin",
-		"jquery-boilerplate"
+	    "sidebar",
+	    "css3",
+	    "plugins"
 	],
 	"license": "MIT"
 }
