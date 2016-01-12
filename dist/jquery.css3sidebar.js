@@ -43,7 +43,6 @@
                 base.$el.on("click", $.proxy(function(){
                     this.toggleSidemenu();
                 },this));
-                console.log("init");
                 base.$targetEl.on("touchstart, click", $.proxy(function () {
                     if(base.$targetEl.hasClass("activeCss3Sidebar")){
                         this.closeSidemenu();
