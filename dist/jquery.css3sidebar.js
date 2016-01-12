@@ -8,6 +8,7 @@
  */
 // the semi-colon before function invocation is a safety net against concatenated
 // scripts and/or other plugins which may not be closed properly.
+
 ;(function ( $ ) {
    
         $.css3sidebar = function(el, action, options){

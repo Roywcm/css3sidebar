@@ -1,15 +1,7 @@
 // the semi-colon before function invocation is a safety net against concatenated
 // scripts and/or other plugins which may not be closed properly.
 
-// UMD dance - https://github.com/umdjs/umd
-!function(root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    define(['jquery'], factory);
-  } else {
-    factory(root.jQuery);
-  }
-}(this, function($) {
-  'use strict';
+;(function ( $ ) {
    
         $.css3sidebar = function(el, action, options){
             // To avoid scope issues, use "base" instead of "this"
@@ -100,4 +92,4 @@
         $(document).ready(function(){
             $("[data-toggle='css3sidebar']").css3sidebar();
         });
-});
+})( jQuery );
