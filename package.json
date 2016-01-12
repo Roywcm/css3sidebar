@@ -39,7 +39,8 @@
     "karma-qunit": "^0.1.5",
     "phantomjs": "^1.9.18",
     "qunitjs": "^1.19.0",
-    "grunt-contrib-less": "^1.1.0"
+    "grunt-contrib-less": "^1.1.0",
+    "karma-chrome-launcher": "^0.2.2"
   },
   "scripts": {
     "test": "grunt travis --verbose"

@@ -76,7 +76,7 @@ module.exports = function(grunt) {
 				configFile: "karma.conf.js",
 				background: true,
 				singleRun: false,
-				browsers: ["PhantomJS", "Firefox"]
+				browsers: ["Chrome"]
 			},
 		  //continuous integration mode: run tests once in PhantomJS browser.
 		  travis: {
@@ -108,5 +108,5 @@ grunt.loadNpmTasks("grunt-karma");
 
 grunt.registerTask("travis", ["jshint", "karma:travis"]);
 grunt.registerTask("build", ["concat", "uglify"]);
-grunt.registerTask("default", ["less","jshint", "build", "karma:unit:run"]);
+grunt.registerTask("default", ["less","jshint", "build", "karma:unit"]);
 };
