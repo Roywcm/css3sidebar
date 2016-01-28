@@ -54,8 +54,6 @@
                     this.toggleSidemenu();
                 },this));
                 base.$targetEl.on("touchstart, click", $.proxy(function (event) {
-                    console.log(event.target);
-                    
                     if(base.$targetEl.hasClass("activeCss3Sidebar") && $(event.target).is("a[href]") || !$(event.target).closest(".menu-wrapper").length){
                         this.closeSidemenu();
                     }
