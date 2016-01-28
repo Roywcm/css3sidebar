@@ -1,7 +1,16 @@
 // the semi-colon before function invocation is a safety net against concatenated
 // scripts and/or other plugins which may not be closed properly.
 
-;(function ( $ ) {
+// Uses AMD or browser globals to create a jQuery plugin.
+;(function (factory) {
+  if (typeof define === "function" && define.amd) {
+      // AMD. Register as an anonymous module.
+      define(["jquery"], factory);
+  } else {
+      // Browser globals
+      factory(jQuery);
+  }
+}(function ( $ ) {
    
         $.css3sidebar = function(el, action, options){
             // To avoid scope issues, use "base" instead of "this"
@@ -36,20 +45,13 @@
                 base.$el.on("click", $.proxy(function(){
                     this.toggleSidemenu();
                 },this));
-                base.$targetEl.on("touchstart, click", $.proxy(function () {
-                    if(base.$targetEl.hasClass("activeCss3Sidebar")){
+                base.$targetEl.on("touchstart, click", $.proxy(function (event) {
+                    console.log(event.target);
+                    
+                    if(base.$targetEl.hasClass("activeCss3Sidebar") && $(event.target).is("a[href]") || !$(event.target).closest(".menu-wrapper").length){
                         this.closeSidemenu();
                     }
                 },this));
-                
-                $(".menu-wrapper").on("click", function (event) {
-                    // prevent closing on click menu-wrapper and children except an anchor (so te box is closing on link click).
-                    if(!$(event.target).is("a")){
-                        event.stopPropagation();
-                    } else {
-                        base.closeSidemenu();
-                    }
-                });
             };
 
             base.openSidemenu = function(){
@@ -73,6 +75,7 @@
         };
 
          $.css3sidebar.defaultOptions = {
+
         };
 
 
@@ -92,4 +95,4 @@
         $(document).ready(function(){
             $("[data-toggle='css3sidebar']").css3sidebar();
         });
-})( jQuery );
+}));
