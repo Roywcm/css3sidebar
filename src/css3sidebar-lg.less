@@ -1,4 +1,4 @@
-/// constructive sidemenu logic (bootstrap grid)
+/// constructive sidemenu logic (large screens)
 
 .css3sidebar {
 	position: fixed;
@@ -9,19 +9,13 @@
 	height: 100%;
 	pointer-events: none;
 	z-index: 10000;
-	@media (min-width: @grid-float-breakpoint) {z-index: auto;}
 	-webkit-transition: all 500ms ease;
 	   -moz-transition: all 500ms ease;
 	    -ms-transition: all 500ms ease;
 	     -o-transition: all 500ms ease;
 	        transition: all 500ms ease;
 	
-	@media (min-width: @grid-float-breakpoint) {
-		pointer-events: all;
-		position: relative;
-		width: auto;
-		height: auto;
-	}
+	
 	.menu-wrapper {
 		height: 100%;
 		position: absolute;
@@ -30,25 +24,15 @@
 	    -ms-transition: all 500ms ease;
 	     -o-transition: all 500ms ease;
 	        transition: all 500ms ease;
-		@media (min-width: @grid-float-breakpoint) {
-			position: relative;
-			left: 0;
-			width: auto; height: auto;
-		}
 	}
 	&.activeCss3Sidebar {
 		background: rgba(0, 0, 0, 0.5);
 		pointer-events: all;
-		@media (min-width: @grid-float-breakpoint) { background: transparent;}
 	}
 	&.sidebar-left {
 		.menu-wrapper {
 			left: -90%;
 			width: 80%;
-			@media (min-width: @grid-float-breakpoint) {
-				left: 0;
-				width: auto;
-			}
 		}
 		&.activeCss3Sidebar .menu-wrapper {left:0;}
 	}
@@ -56,10 +40,6 @@
 		.menu-wrapper { 
 			right: -90%;
 			width: 80%;
-			@media (min-width: @grid-float-breakpoint) {
-				right: 0;
-				width: auto;
-			}
 		}
 		&.activeCss3Sidebar .menu-wrapper {right:0;}
 	}
@@ -68,9 +48,6 @@
 			top: -100%;
 			height: 10%;
 			width: 100%;
-			@media (min-width: @grid-float-breakpoint) {
-				top: 0;
-			}
 		}
 		&.activeCss3Sidebar .menu-wrapper {top:0;}
 	}

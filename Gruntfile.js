@@ -60,7 +60,10 @@ module.exports = function(grunt) {
 				options: {
 					paths: ["assets/css"]
 				},
-				files: {"css/css3sidebar.css": "src/css3sidebar.less"}
+				files: {
+					"css/css3sidebar.css": "src/css3sidebar.less",
+					"css/css3sidebar-lg.css": "src/css3sidebar-lg.less"
+				}
 			},
 			production: {
 				options: {

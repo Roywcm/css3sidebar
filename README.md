@@ -24,3 +24,28 @@ Add the sidebar html:
 
 ##Step 4: 
 Style your sidebar and add custom html code!
+
+
+##Methods
+```
+$(element).css3sidebar('openSidemenu');
+$(element).css3sidebar('closeSidemenu');
+$(element).css3sidebar('toggleSidemenu');
+```
+
+##Bootstrap LESS
+If you want to work with the bootstrap grid, import the bootstrap less file into your less project
+```
+src/css3sidebar-bootstrap.less
+```
+
+##Work on desktop screens
+By default, this sidebar plugin works only on small screens. To work with this plugin on large screens, add the large css or less: 
+```
+src/css3sidebar-lg.less
+```
+or 
+```
+css/css3sidebar-lg.css
+```
+
