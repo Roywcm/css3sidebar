@@ -86,8 +86,9 @@ factory(jQuery);
             return returns !== undefined ? returns : this;
         }
     };
+    $(document).ready(function(){
+        $("[data-toggle='css3sidebar']").each(function(){
+             $.data(this, "plugin_" + pluginName, new Plugin( this ));
+        });
+    });
 }));
-
-$(document).ready(function(){
-    $("[data-toggle='css3sidebar']").css3sidebar();
-});
