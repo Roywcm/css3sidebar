@@ -41,13 +41,13 @@ factory(jQuery);
         openSidemenu: function(){
             $(this.settings.target).addClass("activeCss3Sidebar");
             var startEvent = $.Event("css3sidebar.open");
-            $(this.element).trigger(startEvent);
+            $(this.element).trigger(startEvent).addClass("active");
         },
 
         closeSidemenu: function(){
             $(this.settings.target).removeClass("activeCss3Sidebar");
             var startEvent = $.Event("css3sidebar.close");
-            $(this.element).trigger(startEvent);
+            $(this.element).trigger(startEvent).removeClass("active");
         },
 
         toggleSidemenu: function(){
