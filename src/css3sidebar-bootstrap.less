@@ -9,6 +9,7 @@
 	height: 100%;
 	pointer-events: none;
 	z-index: 10000;
+	visibility: hidden;
 	@media (min-width: @grid-float-breakpoint) {z-index: auto;}
 	-webkit-transition: all 500ms ease;
 	   -moz-transition: all 500ms ease;
@@ -39,6 +40,7 @@
 	&.activeCss3Sidebar {
 		background: rgba(0, 0, 0, 0.5);
 		pointer-events: all;
+		visibility: visible;
 		@media (min-width: @grid-float-breakpoint) { background: transparent;}
 	}
 	&.sidebar-left {

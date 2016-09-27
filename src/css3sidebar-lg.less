@@ -9,13 +9,13 @@
 	height: 100%;
 	pointer-events: none;
 	z-index: 10000;
+	visibility: hidden;
 	-webkit-transition: all 500ms ease;
 	   -moz-transition: all 500ms ease;
 	    -ms-transition: all 500ms ease;
 	     -o-transition: all 500ms ease;
 	        transition: all 500ms ease;
-	
-	
+	        
 	.menu-wrapper {
 		height: 100%;
 		position: absolute;
@@ -28,6 +28,7 @@
 	&.activeCss3Sidebar {
 		background: rgba(0, 0, 0, 0.5);
 		pointer-events: all;
+		visibility: visible;
 	}
 	&.sidebar-left {
 		.menu-wrapper {
