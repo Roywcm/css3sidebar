@@ -42,12 +42,14 @@ factory(jQuery);
             $(this.settings.target).addClass("activeCss3Sidebar");
             var startEvent = $.Event("css3sidebar.open");
             $(this.element).trigger(startEvent).addClass("active");
+            $("body").addClass("activeCss3SidebarBody");
         },
 
         closeSidemenu: function(){
             $(this.settings.target).removeClass("activeCss3Sidebar");
             var startEvent = $.Event("css3sidebar.close");
             $(this.element).trigger(startEvent).removeClass("active");
+            $("body").removeClass("activeCss3SidebarBody");
         },
 
         toggleSidemenu: function(){
