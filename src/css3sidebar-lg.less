@@ -52,4 +52,29 @@
 		}
 		&.activeCss3Sidebar .menu-wrapper {top:0;}
 	}
+	&.sidebar-popin {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.menu-wrapper {
+			animation-duration: 300ms;
+			animation-fill-mode: both;
+			animation-name: zoomIn;
+			display: none;
+			width: 80%;
+			height: 80%;
+
+			@keyframes zoomIn {
+				from {
+					opacity: 0;
+					transform: scale3d(.3, .3, .3);
+				}
+
+				50% {
+					opacity: 1;
+				}
+			}
+		}
+		&.activeCss3Sidebar .menu-wrapper {display: block;}
+	}
 }

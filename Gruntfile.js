@@ -62,7 +62,8 @@ module.exports = function(grunt) {
 				},
 				files: {
 					"css/css3sidebar.css": "src/css3sidebar.less",
-					"css/css3sidebar-lg.css": "src/css3sidebar-lg.less"
+					"css/css3sidebar-lg.css": "src/css3sidebar-lg.less",
+					"css/css3sidebar.popin.css": "src/css3sidebar.popin.less"
 				}
 			},
 			production: {
@@ -70,7 +71,11 @@ module.exports = function(grunt) {
 					paths: ["assets/css"],
 					cleancss: true
 				},
-				files: {"css/css3sidebar.css": "src/css3sidebar.less"}
+				files: {
+					"css/css3sidebar.css": "src/css3sidebar.less",
+					"css/css3sidebar-lg.css": "src/css3sidebar-lg.less",
+					"css/css3sidebar.popin.css": "src/css3sidebar.popin.less"
+				}
 			}
 		},
 		// karma test runner
@@ -101,15 +106,15 @@ module.exports = function(grunt) {
 
 	});
 
-grunt.loadNpmTasks("grunt-contrib-concat");
-grunt.loadNpmTasks("grunt-contrib-jshint");
-grunt.loadNpmTasks("grunt-contrib-uglify");
-grunt.loadNpmTasks("grunt-contrib-coffee");
-grunt.loadNpmTasks("grunt-contrib-watch");
-grunt.loadNpmTasks('grunt-contrib-less');
-grunt.loadNpmTasks("grunt-karma");
+	grunt.loadNpmTasks("grunt-contrib-concat");
+	grunt.loadNpmTasks("grunt-contrib-jshint");
+	grunt.loadNpmTasks("grunt-contrib-uglify");
+	grunt.loadNpmTasks("grunt-contrib-coffee");
+	grunt.loadNpmTasks("grunt-contrib-watch");
+	grunt.loadNpmTasks('grunt-contrib-less');
+	grunt.loadNpmTasks("grunt-karma");
 
-grunt.registerTask("travis", ["jshint", "karma:travis"]);
-grunt.registerTask("build", ["concat", "uglify"]);
-grunt.registerTask("default", ["less","jshint", "build", "karma:unit"]);
+	grunt.registerTask("travis", ["jshint", "karma:travis"]);
+	grunt.registerTask("build", ["concat", "uglify"]);
+	grunt.registerTask("default", ["less","jshint", "build", "karma:unit"]);
 };

@@ -93,3 +93,28 @@
 .css3sidebar.sidebar-top.activeCss3Sidebar .menu-wrapper {
   top: 0;
 }
+.css3sidebar.sidebar-popin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.css3sidebar.sidebar-popin .menu-wrapper {
+  animation-duration: 300ms;
+  animation-fill-mode: both;
+  animation-name: zoomIn;
+  display: none;
+  width: 80%;
+  height: 80%;
+}
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.css3sidebar.sidebar-popin.activeCss3Sidebar .menu-wrapper {
+  display: block;
+}
