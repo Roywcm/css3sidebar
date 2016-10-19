@@ -16,6 +16,7 @@
 }
 @media (min-width: 768px) {
   .css3sidebar {
+    visibility: visible;
     z-index: auto;
   }
 }
