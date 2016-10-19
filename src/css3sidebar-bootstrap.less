@@ -10,7 +10,10 @@
 	pointer-events: none;
 	z-index: 10000;
 	visibility: hidden;
-	@media (min-width: @grid-float-breakpoint) {z-index: auto;}
+	@media (min-width: @grid-float-breakpoint) {
+		visibility: visible;
+		z-index: auto;
+	}
 	-webkit-transition: all 500ms ease;
 	   -moz-transition: all 500ms ease;
 	    -ms-transition: all 500ms ease;
