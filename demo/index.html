@@ -6,17 +6,28 @@
 	<script src="../node_modules/jquery/dist/jquery.min.js"></script>
 	<script src="../src/jquery.css3sidebar.js"></script>
 	<link href="../css/css3sidebar.css" rel="stylesheet">
+	<link href="../css/css3sidebar-lg.css" rel="stylesheet">
 	<style>
 		.css3sidebar .menu-wrapper {
+			background: white;
+		}
+		.css3sidebar-lg .menu-wrapper {
 			background: white;
 		}
 	</style>
 </head>
 <body>
-	<button type="button" class="navbar-toggle collapsed" data-toggle="css3sidebar" data-target="#primary-sidebar" aria-expanded="false"><span class="fa fa-bars"></span></button>
+	<button type="button" class="navbar-toggle collapsed" data-toggle="css3sidebar" data-target="#primary-sidebar" aria-expanded="false">open on mobile</button>
 	<div class="css3sidebar sidebar-left" id="primary-sidebar">
 		<div class="menu-wrapper">
-		test
+		This menu only collapse on mobile
+		</div>
+	</div>
+
+	<button type="button" class="navbar-toggle collapsed" data-toggle="css3sidebar" data-target="#desktop-sidebar" aria-expanded="false">open on desktop</button>
+	<div class="css3sidebar-lg sidebar-left" id="desktop-sidebar">
+		<div class="menu-wrapper">
+		Desktop!
 		</div>
 	</div>
 </body>
