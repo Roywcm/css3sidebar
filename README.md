@@ -33,19 +33,18 @@ $(element).css3sidebar('closeSidemenu');
 $(element).css3sidebar('toggleSidemenu');
 ```
 
-##Bootstrap LESS
-If you want to work with the bootstrap grid, import the bootstrap less file into your less project
+##SASS
+When you work with SASS you can edit the breakpoints. 
+@import src/sass/css3sidebar.scss in your project and prepend:
+
 ```
-src/css3sidebar-bootstrap.less
+$sidebarbreakpoint: 768px; // your breakpoint
 ```
 
 ##Work on desktop screens
-By default, this sidebar plugin works only on small screens. To work with this plugin on large screens, add the large css or less: 
+By default the sidebar will work on mobile and desktop. If you want to exclude the functionality on desktop. add the following to your sidebar wrapper:
+
 ```
-src/css3sidebar-lg.less
-```
-or 
-```
-css/css3sidebar-lg.css
+	<div class="css3sidebar css3sidebar-lg sidebar-left" id="primary-sidebar"></div>
 ```
 
