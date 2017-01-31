@@ -13,16 +13,6 @@
   -ms-transition: all 500ms ease;
   -o-transition: all 500ms ease;
   transition: all 500ms ease; }
-  @media (min-width: 768px) {
-    .css3sidebar {
-      visibility: visible;
-      z-index: auto; } }
-  @media (min-width: 768px) {
-    .css3sidebar {
-      pointer-events: all;
-      position: relative;
-      width: auto;
-      height: auto; } }
   .css3sidebar .menu-wrapper {
     height: 100%;
     position: absolute;
@@ -31,44 +21,24 @@
     -ms-transition: all 500ms ease;
     -o-transition: all 500ms ease;
     transition: all 500ms ease; }
-    @media (min-width: 768px) {
-      .css3sidebar .menu-wrapper {
-        position: relative;
-        left: 0;
-        width: auto;
-        height: auto; } }
   .css3sidebar.activeCss3Sidebar {
     background: rgba(0, 0, 0, 0.5);
     pointer-events: all;
     visibility: visible; }
-    @media (min-width: 768px) {
-      .css3sidebar.activeCss3Sidebar {
-        background: transparent; } }
   .css3sidebar.sidebar-left .menu-wrapper {
     left: -90%;
     width: 80%; }
-    @media (min-width: 768px) {
-      .css3sidebar.sidebar-left .menu-wrapper {
-        left: 0;
-        width: auto; } }
   .css3sidebar.sidebar-left.activeCss3Sidebar .menu-wrapper {
     left: 0; }
   .css3sidebar.sidebar-right .menu-wrapper {
     right: -90%;
     width: 80%; }
-    @media (min-width: 768px) {
-      .css3sidebar.sidebar-right .menu-wrapper {
-        right: 0;
-        width: auto; } }
   .css3sidebar.sidebar-right.activeCss3Sidebar .menu-wrapper {
     right: 0; }
   .css3sidebar.sidebar-top .menu-wrapper {
     top: -100%;
     height: 10%;
     width: 100%; }
-    @media (min-width: 768px) {
-      .css3sidebar.sidebar-top .menu-wrapper {
-        top: 0; } }
   .css3sidebar.sidebar-top.activeCss3Sidebar .menu-wrapper {
     top: 0; }
   .css3sidebar.sidebar-popin {
@@ -90,5 +60,34 @@
     opacity: 1; } }
     .css3sidebar.sidebar-popin.activeCss3Sidebar .menu-wrapper {
       display: block; }
+
+@media (min-width: 768px) {
+  .css3sidebar.css3sidebar-lg {
+    visibility: visible;
+    z-index: auto;
+    pointer-events: all;
+    position: relative;
+    width: auto;
+    height: auto; } }
+@media (min-width: 768px) {
+  .css3sidebar.css3sidebar-lg .menu-wrapper {
+    position: relative;
+    left: 0;
+    width: auto;
+    height: auto; } }
+@media (min-width: 768px) {
+  .css3sidebar.css3sidebar-lg.activeCss3Sidebar {
+    background: transparent; } }
+@media (min-width: 768px) {
+  .css3sidebar.css3sidebar-lg.sidebar-left .menu-wrapper {
+    left: 0;
+    width: auto; } }
+@media (min-width: 768px) {
+  .css3sidebar.css3sidebar-lg.sidebar-right .menu-wrapper {
+    right: 0;
+    width: auto; } }
+@media (min-width: 768px) {
+  .css3sidebar.css3sidebar-lg.sidebar-top .menu-wrapper {
+    top: 0; } }
 
 /*# sourceMappingURL=css3sidebar.css.map */

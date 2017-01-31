@@ -82,8 +82,6 @@ module.exports = function(grunt) {
 			dist: {
 				files: {
 					"css/css3sidebar.css": "src/sass/css3sidebar.scss",
-					"css/css3sidebar-lg.css": "src/sass/css3sidebar-lg.scss",
-					"css/css3sidebar.popin.css": "src/sass/css3sidebar.popin.scss",
 				}
 			}
 		},

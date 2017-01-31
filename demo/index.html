@@ -6,7 +6,6 @@
 	<script src="../node_modules/jquery/dist/jquery.min.js"></script>
 	<script src="../src/jquery.css3sidebar.js"></script>
 	<link href="../css/css3sidebar.css" rel="stylesheet">
-	<link href="../css/css3sidebar-lg.css" rel="stylesheet">
 	<style>
 		.css3sidebar .menu-wrapper {
 			background: white;
@@ -17,17 +16,24 @@
 	</style>
 </head>
 <body>
-	<button type="button" class="navbar-toggle collapsed" data-toggle="css3sidebar" data-target="#primary-sidebar" aria-expanded="false">open on mobile</button>
+	<button type="button" class="navbar-toggle collapsed" data-toggle="css3sidebar" data-target="#primary-sidebar" aria-expanded="false">open base sidebar</button>
 	<div class="css3sidebar sidebar-left" id="primary-sidebar">
 		<div class="menu-wrapper">
-		This menu only collapse on mobile
+		This menu is only visible when you toggle the sidemenu
 		</div>
 	</div>
 
-	<button type="button" class="navbar-toggle collapsed" data-toggle="css3sidebar" data-target="#desktop-sidebar" aria-expanded="false">open on desktop</button>
-	<div class="css3sidebar-lg sidebar-left" id="desktop-sidebar">
+	<button type="button" class="navbar-toggle collapsed" data-toggle="css3sidebar" data-target="#desktop-sidebar" aria-expanded="false">open mobile sidemenu (only working on small devices</button>
+	<div class="css3sidebar css3sidebar-lg sidebar-left" id="desktop-sidebar">
 		<div class="menu-wrapper">
-		Desktop!
+		This menu is visible on desktop views and hides on mobile.
+		</div>
+	</div>
+
+	<button type="button" class="navbar-toggle collapsed" data-toggle="css3sidebar" data-target="#popin" aria-expanded="false">Popin!</button>
+	<div class="css3sidebar sidebar-popin" id="popin">
+		<div class="menu-wrapper">
+		Popin!
 		</div>
 	</div>
 </body>

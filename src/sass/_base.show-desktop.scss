@@ -1,0 +1,45 @@
+/// constructive sidemenu logic (large screens)
+
+.css3sidebar.css3sidebar-lg {
+	@media (min-width: $sidebarbreakpoint) {
+		visibility: visible;
+		z-index: auto;
+		pointer-events: all;
+		position: relative;
+		width: auto;
+		height: auto;
+	}
+	.menu-wrapper {
+		@media (min-width: $sidebarbreakpoint) {
+			position: relative;
+			left: 0;
+			width: auto; height: auto;
+		}
+	}
+	&.activeCss3Sidebar {
+		@media (min-width: $sidebarbreakpoint) { background: transparent;}
+	}
+	&.sidebar-left {
+		.menu-wrapper {
+			@media (min-width: $sidebarbreakpoint) {
+				left: 0;
+				width: auto;
+			}
+		}
+	}
+	&.sidebar-right {
+		.menu-wrapper { 
+			@media (min-width: $sidebarbreakpoint) {
+				right: 0;
+				width: auto;
+			}
+		}
+	}
+	&.sidebar-top {
+		.menu-wrapper {
+			@media (min-width: $sidebarbreakpoint) {
+				top: 0;
+			}
+		}
+	}
+}
