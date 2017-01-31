@@ -78,6 +78,15 @@ module.exports = function(grunt) {
 				}
 			}
 		},
+		sass: {
+			dist: {
+				files: {
+					"css/css3sidebar.css": "src/sass/css3sidebar.scss",
+					"css/css3sidebar-lg.css": "src/sass/css3sidebar-lg.scss",
+					"css/css3sidebar.popin.css": "src/sass/css3sidebar.popin.scss",
+				}
+			}
+		},
 		// karma test runner
 		karma: {
 			unit: {
@@ -112,6 +121,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks("grunt-contrib-coffee");
 	grunt.loadNpmTasks("grunt-contrib-watch");
 	grunt.loadNpmTasks('grunt-contrib-less');
+	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks("grunt-karma");
 
 	grunt.registerTask("travis", ["jshint", "karma:travis"]);
