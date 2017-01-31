@@ -1,9 +1,9 @@
 /*
- *  css3sidebar - v1.1.0
+ *  css3sidebar - v2.0.0
  *  Start building creative sidebars!
  *  http://roywulms.nl
  *
- *  Made by Roy Wulms
+ *  Made by 
  *  Under MIT License
  */
 // the semi-colon before function invocation is a safety net against concatenated

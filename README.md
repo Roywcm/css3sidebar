@@ -35,7 +35,14 @@ $(element).css3sidebar('toggleSidemenu');
 
 ##SASS
 When you work with SASS you can edit the breakpoints. 
-@import src/sass/css3sidebar.scss in your project and prepend:
+By adding the following files to your project:
+
+```
+@import "_base.scss";
+@import "_base.show-desktop.scss";
+@import "_base.popin.scss";
+```
+And prepend thos with:
 
 ```
 $sidebarbreakpoint: 768px; // your breakpoint

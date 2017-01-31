@@ -55,29 +55,6 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		less: {
-			development: {
-				options: {
-					paths: ["assets/css"]
-				},
-				files: {
-					"css/css3sidebar.css": "src/css3sidebar.less",
-					"css/css3sidebar-lg.css": "src/css3sidebar-lg.less",
-					"css/css3sidebar.popin.css": "src/css3sidebar.popin.less"
-				}
-			},
-			production: {
-				options: {
-					paths: ["assets/css"],
-					cleancss: true
-				},
-				files: {
-					"css/css3sidebar.css": "src/css3sidebar.less",
-					"css/css3sidebar-lg.css": "src/css3sidebar-lg.less",
-					"css/css3sidebar.popin.css": "src/css3sidebar.popin.less"
-				}
-			}
-		},
 		sass: {
 			dist: {
 				files: {
@@ -120,9 +97,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks("grunt-contrib-watch");
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-contrib-sass');
-	grunt.loadNpmTasks("grunt-karma");
 
 	grunt.registerTask("travis", ["jshint", "karma:travis"]);
 	grunt.registerTask("build", ["concat", "uglify"]);
-	grunt.registerTask("default", ["less","jshint", "build", "karma:unit"]);
+	grunt.registerTask("default", ["sass","jshint", "build"]);
 };
