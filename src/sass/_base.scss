@@ -19,11 +19,8 @@
 	.menu-wrapper {
 		height: 100%;
 		position: absolute;
-		-webkit-transition: all 500ms ease;
-	   -moz-transition: all 500ms ease;
-	    -ms-transition: all 500ms ease;
-	     -o-transition: all 500ms ease;
-	        transition: all 500ms ease;
+		animation-duration: 500ms;
+		animation-fill-mode: forwards;
 	}
 	&.activeCss3Sidebar {
 		background: rgba(0, 0, 0, 0.5);
@@ -35,14 +32,14 @@
 			left: -90%;
 			width: 80%;
 		}
-		&.activeCss3Sidebar .menu-wrapper {left:0;}
+		&.activeCss3Sidebar .menu-wrapper {  animation-name: SideBarLeft;  }
 	}
 	&.sidebar-right {
 		.menu-wrapper { 
 			right: -90%;
 			width: 80%;
 		}
-		&.activeCss3Sidebar .menu-wrapper {right:0;}
+		&.activeCss3Sidebar .menu-wrapper { animation-name: SideBarRight;}
 	}
 	&.sidebar-top {
 		.menu-wrapper {
@@ -50,7 +47,7 @@
 			height: 10%;
 			width: 100%;
 		}
-		&.activeCss3Sidebar .menu-wrapper {top:0;}
+		&.activeCss3Sidebar .menu-wrapper { animation-name: SideBarTop;}
 	}
 	&.sidebar-popin {
 		display: flex;
@@ -60,21 +57,36 @@
 			animation-duration: 300ms;
 			animation-fill-mode: both;
 			animation-name: zoomIn;
-			display: none;
 			width: 80%;
 			height: 80%;
-
-			@keyframes zoomIn {
-				from {
-					opacity: 0;
-					transform: scale3d(.3, .3, .3);
-				}
-
-				50% {
-					opacity: 1;
-				}
-			}
+			display: none;
 		}
 		&.activeCss3Sidebar .menu-wrapper {display: block;}
+	}
+}
+
+@keyframes SideBarLeft {
+	0%   {left: -90%}
+	100% {left: 0%;}
+}
+
+@keyframes SideBarRight {
+	0%   {right: -90%}
+	100% {right: 0%;}
+}
+
+@keyframes SideBarTop {
+	0%   {top: -100%}
+	100% {top: 0%;}
+}
+
+@keyframes zoomIn {
+	from {
+		opacity: 0;
+		transform: scale3d(.3, .3, .3);
+	}
+
+	50% {
+		opacity: 1;
 	}
 }

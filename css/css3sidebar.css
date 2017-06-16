@@ -16,11 +16,8 @@
   .css3sidebar .menu-wrapper {
     height: 100%;
     position: absolute;
-    -webkit-transition: all 500ms ease;
-    -moz-transition: all 500ms ease;
-    -ms-transition: all 500ms ease;
-    -o-transition: all 500ms ease;
-    transition: all 500ms ease; }
+    animation-duration: 500ms;
+    animation-fill-mode: forwards; }
   .css3sidebar.activeCss3Sidebar {
     background: rgba(0, 0, 0, 0.5);
     pointer-events: all;
@@ -29,18 +26,18 @@
     left: -90%;
     width: 80%; }
   .css3sidebar.sidebar-left.activeCss3Sidebar .menu-wrapper {
-    left: 0; }
+    animation-name: SideBarLeft; }
   .css3sidebar.sidebar-right .menu-wrapper {
     right: -90%;
     width: 80%; }
   .css3sidebar.sidebar-right.activeCss3Sidebar .menu-wrapper {
-    right: 0; }
+    animation-name: SideBarRight; }
   .css3sidebar.sidebar-top .menu-wrapper {
     top: -100%;
     height: 10%;
     width: 100%; }
   .css3sidebar.sidebar-top.activeCss3Sidebar .menu-wrapper {
-    top: 0; }
+    animation-name: SideBarTop; }
   .css3sidebar.sidebar-popin {
     display: flex;
     align-items: center;
@@ -49,18 +46,33 @@
       animation-duration: 300ms;
       animation-fill-mode: both;
       animation-name: zoomIn;
-      display: none;
       width: 80%;
-      height: 80%; }
+      height: 80%;
+      display: none; }
+    .css3sidebar.sidebar-popin.activeCss3Sidebar .menu-wrapper {
+      display: block; }
+
+@keyframes SideBarLeft {
+  0% {
+    left: -90%; }
+  100% {
+    left: 0%; } }
+@keyframes SideBarRight {
+  0% {
+    right: -90%; }
+  100% {
+    right: 0%; } }
+@keyframes SideBarTop {
+  0% {
+    top: -100%; }
+  100% {
+    top: 0%; } }
 @keyframes zoomIn {
   from {
     opacity: 0;
     transform: scale3d(0.3, 0.3, 0.3); }
   50% {
     opacity: 1; } }
-    .css3sidebar.sidebar-popin.activeCss3Sidebar .menu-wrapper {
-      display: block; }
-
 @media (min-width: 768px) {
   .css3sidebar.css3sidebar-lg {
     visibility: visible;
@@ -68,26 +80,23 @@
     pointer-events: all;
     position: relative;
     width: auto;
-    height: auto; } }
-@media (min-width: 768px) {
-  .css3sidebar.css3sidebar-lg .menu-wrapper {
-    position: relative;
-    left: 0;
-    width: auto;
-    height: auto; } }
-@media (min-width: 768px) {
-  .css3sidebar.css3sidebar-lg.activeCss3Sidebar {
-    background: transparent; } }
-@media (min-width: 768px) {
-  .css3sidebar.css3sidebar-lg.sidebar-left .menu-wrapper {
-    left: 0;
-    width: auto; } }
-@media (min-width: 768px) {
-  .css3sidebar.css3sidebar-lg.sidebar-right .menu-wrapper {
-    right: 0;
-    width: auto; } }
-@media (min-width: 768px) {
-  .css3sidebar.css3sidebar-lg.sidebar-top .menu-wrapper {
-    top: 0; } }
+    height: auto; }
+    .css3sidebar.css3sidebar-lg .menu-wrapper {
+      position: relative;
+      left: 0;
+      width: auto;
+      height: auto; }
+    .css3sidebar.css3sidebar-lg.activeCss3Sidebar {
+      background: transparent; }
+    .css3sidebar.css3sidebar-lg.sidebar-left .menu-wrapper {
+      left: 0;
+      width: auto; }
+    .css3sidebar.css3sidebar-lg.sidebar-right .menu-wrapper {
+      right: 0;
+      width: auto; }
+    .css3sidebar.css3sidebar-lg.sidebar-top .menu-wrapper {
+      top: 0; }
+    .css3sidebar.css3sidebar-lg.sidebar-popin .menu-wrapper {
+      display: block; } }
 
 /*# sourceMappingURL=css3sidebar.css.map */

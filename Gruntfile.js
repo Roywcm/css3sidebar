@@ -84,7 +84,7 @@ module.exports = function(grunt) {
 		// Better than calling grunt a million times
 		// (call 'grunt watch')
 		watch: {
-			files: ["src/*", "test/**/*"],
+			files: ["src/*/*", "test/**/*"],
 			tasks: ["default"]
 		}
 
